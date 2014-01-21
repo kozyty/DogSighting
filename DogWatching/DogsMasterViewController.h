@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DogSightingDataController;
+
 @interface DogsMasterViewController : UITableViewController
+
+@property (strong, nonatomic) DogSightingDataController *dataController;
 
 @end

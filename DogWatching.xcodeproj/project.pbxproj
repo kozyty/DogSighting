@@ -22,6 +22,8 @@
 		A2FD4D0B188D1FE90075F62C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD4CEA188D1FE90075F62C /* UIKit.framework */; };
 		A2FD4D13188D1FE90075F62C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2FD4D11188D1FE90075F62C /* InfoPlist.strings */; };
 		A2FD4D15188D1FE90075F62C /* DogWatchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FD4D14188D1FE90075F62C /* DogWatchingTests.m */; };
+		A2FD4D20188D211C0075F62C /* DogSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FD4D1F188D211C0075F62C /* DogSighting.m */; };
+		A2FD4D26188D234E0075F62C /* DogSightingDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FD4D25188D234E0075F62C /* DogSightingDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		A2FD4D10188D1FE90075F62C /* DogWatchingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DogWatchingTests-Info.plist"; sourceTree = "<group>"; };
 		A2FD4D12188D1FE90075F62C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2FD4D14188D1FE90075F62C /* DogWatchingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogWatchingTests.m; sourceTree = "<group>"; };
+		A2FD4D1E188D211C0075F62C /* DogSighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogSighting.h; sourceTree = "<group>"; };
+		A2FD4D1F188D211C0075F62C /* DogSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogSighting.m; sourceTree = "<group>"; };
+		A2FD4D24188D234E0075F62C /* DogSightingDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogSightingDataController.h; sourceTree = "<group>"; };
+		A2FD4D25188D234E0075F62C /* DogSightingDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogSightingDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +121,12 @@
 		A2FD4CEC188D1FE90075F62C /* DogWatching */ = {
 			isa = PBXGroup;
 			children = (
+				A2FD4D23188D22BD0075F62C /* View */,
+				A2FD4D22188D22B60075F62C /* Model */,
+				A2FD4D21188D22A70075F62C /* Controller */,
 				A2FD4CF5188D1FE90075F62C /* DogsAppDelegate.h */,
 				A2FD4CF6188D1FE90075F62C /* DogsAppDelegate.m */,
 				A2FD4CF8188D1FE90075F62C /* Main.storyboard */,
-				A2FD4CFB188D1FE90075F62C /* DogsMasterViewController.h */,
-				A2FD4CFC188D1FE90075F62C /* DogsMasterViewController.m */,
-				A2FD4CFE188D1FE90075F62C /* DogsDetailViewController.h */,
-				A2FD4CFF188D1FE90075F62C /* DogsDetailViewController.m */,
 				A2FD4D01188D1FE90075F62C /* Images.xcassets */,
 				A2FD4CED188D1FE90075F62C /* Supporting Files */,
 			);
@@ -155,6 +160,35 @@
 				A2FD4D11188D1FE90075F62C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2FD4D21188D22A70075F62C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2FD4D24188D234E0075F62C /* DogSightingDataController.h */,
+				A2FD4D25188D234E0075F62C /* DogSightingDataController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A2FD4D22188D22B60075F62C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2FD4D1F188D211C0075F62C /* DogSighting.m */,
+				A2FD4D1E188D211C0075F62C /* DogSighting.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A2FD4D23188D22BD0075F62C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2FD4CFB188D1FE90075F62C /* DogsMasterViewController.h */,
+				A2FD4CFC188D1FE90075F62C /* DogsMasterViewController.m */,
+				A2FD4CFE188D1FE90075F62C /* DogsDetailViewController.h */,
+				A2FD4CFF188D1FE90075F62C /* DogsDetailViewController.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +292,8 @@
 				A2FD4D00188D1FE90075F62C /* DogsDetailViewController.m in Sources */,
 				A2FD4CF3188D1FE90075F62C /* main.m in Sources */,
 				A2FD4CF7188D1FE90075F62C /* DogsAppDelegate.m in Sources */,
+				A2FD4D26188D234E0075F62C /* DogSightingDataController.m in Sources */,
+				A2FD4D20188D211C0075F62C /* DogSighting.m in Sources */,
 				A2FD4CFD188D1FE90075F62C /* DogsMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
