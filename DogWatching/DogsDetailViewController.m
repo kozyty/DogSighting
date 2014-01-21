@@ -7,6 +7,7 @@
 //
 
 #import "DogsDetailViewController.h"
+#import "DogSighting.h"
 
 @interface DogsDetailViewController ()
 - (void)configureView;
@@ -16,12 +17,12 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setSighting:(DogSighting *)newSighting
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_sighting != newSighting) {
+        _sighting = newSighting;
         
-        // Update the view.
+        // view update
         [self configureView];
     }
 }
@@ -29,10 +30,19 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    DogSighting *theSighting = self.sighting;
+    
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
+    if (theSighting) {
+        self.dogNameLabel.text = theSighting.name;
+        self.locationLabel.text = theSighting.location;
+        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSighting.date];
+    }
+
 }
 
 - (void)viewDidLoad

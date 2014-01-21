@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DogsDetailViewController : UIViewController
+@class DogSighting;
 
-@property (strong, nonatomic) id detailItem;
+@interface DogsDetailViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) DogSighting *sighting;
+@property (weak, nonatomic) IBOutlet UILabel *dogNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end
