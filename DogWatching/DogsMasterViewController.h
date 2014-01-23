@@ -14,4 +14,7 @@
 
 @property (strong, nonatomic) DogSightingDataController *dataController;
 
+- (IBAction)done:(UIStoryboardSegue *)segue;
+- (IBAction)cancel:(UIStoryboardSegue *)segue;
+
 @end

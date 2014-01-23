@@ -22,7 +22,7 @@
     self.masterDogSightingList = sightingList;
     DogSighting *sighting;
     NSDate *today = [NSDate date];
-    sighting = [[DogSighting alloc] initWithName:@"Shiba" location:@"EveryWhere" date:today];
+    sighting = [[DogSighting alloc] initWithName:@"柴犬" location:@"EveryWhere" date:today];
     [self addDogSightingWithSighting:sighting];
 }
 

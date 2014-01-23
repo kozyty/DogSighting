@@ -9,6 +9,7 @@
 #import "DogsMasterViewController.h"
 #import "DogSightingDataController.h"
 #import "DogsDetailViewController.h"
+#import "AddSightingViewController.h"
 #import "DogSighting.h"
 
 @implementation DogsMasterViewController
@@ -23,6 +24,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.rightBarButtonItem.accessibilityHint = @"Add a new doc sighting event.";
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +78,24 @@
         DogsDetailViewController *detailViewController = [segue destinationViewController];
         
         detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
+}
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        AddSightingViewController *addController = [segue sourceViewController];
+        if (addController.dogSighting) {
+            [self.dataController addDogSightingWithSighting:addController.dogSighting];
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+- (IBAction)cancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"CancellInput"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 

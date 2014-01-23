@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2839DBF188DFC1C007952E0 /* AddSightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2839DBE188DFC1C007952E0 /* AddSightingViewController.m */; };
 		A2FD4CE7188D1FE90075F62C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD4CE6188D1FE90075F62C /* Foundation.framework */; };
 		A2FD4CE9188D1FE90075F62C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD4CE8188D1FE90075F62C /* CoreGraphics.framework */; };
 		A2FD4CEB188D1FE90075F62C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FD4CEA188D1FE90075F62C /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2839DBD188DFC1C007952E0 /* AddSightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSightingViewController.h; sourceTree = "<group>"; };
+		A2839DBE188DFC1C007952E0 /* AddSightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSightingViewController.m; sourceTree = "<group>"; };
 		A2FD4CE3188D1FE90075F62C /* DogWatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogWatching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FD4CE6188D1FE90075F62C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2FD4CE8188D1FE90075F62C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				A2FD4CFB188D1FE90075F62C /* DogsMasterViewController.h */,
+				A2839DBD188DFC1C007952E0 /* AddSightingViewController.h */,
+				A2839DBE188DFC1C007952E0 /* AddSightingViewController.m */,
 				A2FD4CFC188D1FE90075F62C /* DogsMasterViewController.m */,
 				A2FD4CFE188D1FE90075F62C /* DogsDetailViewController.h */,
 				A2FD4CFF188D1FE90075F62C /* DogsDetailViewController.m */,
@@ -293,6 +298,7 @@
 				A2FD4CF3188D1FE90075F62C /* main.m in Sources */,
 				A2FD4CF7188D1FE90075F62C /* DogsAppDelegate.m in Sources */,
 				A2FD4D26188D234E0075F62C /* DogSightingDataController.m in Sources */,
+				A2839DBF188DFC1C007952E0 /* AddSightingViewController.m in Sources */,
 				A2FD4D20188D211C0075F62C /* DogSighting.m in Sources */,
 				A2FD4CFD188D1FE90075F62C /* DogsMasterViewController.m in Sources */,
 			);
@@ -503,6 +509,7 @@
 				A2FD4D1A188D1FE90075F62C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2FD4D1B188D1FE90075F62C /* Build configuration list for PBXNativeTarget "DogWatchingTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +518,7 @@
 				A2FD4D1D188D1FE90075F62C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
